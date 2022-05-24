@@ -1,1332 +1,303 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt-br">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+  <!-- ÍCONES Font Awesome -->
+  <script src="https://kit.fontawesome.com/313f3ee851.js" crossorigin="anonymous"></script>
+</head>
 
-    <title>aimnhsni.com</title>
-    <link rel = "icon" href ="https://icon-library.com/images/dev-icon/dev-icon-8.jpg" type = "image/x-icon">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="perfil">
+        <img src="yo.png" alt="foto de perfil" class="foto-perfil">
+        <div class="description">
+          <h1>Aiman Hasni</h1>
+          <h3>Computer Science Fresh Graduate</h3>
+          <div class="icons">
+            <a href="https://github.com/soaresv98.png" title="Github" class="link-icon" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://codepen.io/soaresv98" title="Codepen" class="link-icon" target="_blank">
+              <i class="fa-brands fa-codepen"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button title="Tema" onclick="mudarTema()"></button>
+      
+
+
+    </header>
 
     <style>
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-      line-height: 1.8;
-
-      
-          }
-    .banner{
-
-
-
-
-   
-    }
-
-
-
-  .container-fluid {
-    padding-top: 150px;
-    padding-bottom: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 20px;
-    background-color:#ECF87F;
-    background-image: url(https://tumblrcanripmypornfrommycolddeadhandshome.files.wordpress.com/2017/03/tumblr_oj0yx96uJB1vnh162o1_1280.gif) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-
-
-
-
-  }
- 
-
-    .navbar {
-   
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0 ;
-    font-size: 14px;
-    letter-spacing: 3px;
-    background-color: #fff;;
-    text-align: center;
-
-  }
-  .navbar-header{
-
-    margin-top: 20px;
-  }
-
-  .navbar-toggle{
-
-    border: none;
-    margin-top: 0px;
-    cursor: default;
-
-  }
-
-
-footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
-}
-
-#avatar{
-  width:50px;
-  height:50px;
-  background-size:cover;
-  background-position:center;
-  border-radius:50%;
- 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-@-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-
-h3 { 
-  font: bold 300% Consolas, Monaco, monospace;
-  border-right: .1em solid black;
-  width: 16.5em; 
-  width: 21ch;
-  margin: 2em 1em;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: typing 2s steps(21, end),
-             blink-caret .5s step-end infinite alternate;
-}
-
-.home{
-    width:130px;
-    height:50px;
-    outline: none;
-    border:none;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
-    font-family: -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif;
-    
-
-}
-
-.home:hover{
-  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-  inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-
-
-}
-.home:active {
-  
- text-decoration: none;
- box-shadow: none;
- transform: translateY(4px);
-}
-.im-home{
-  
-    width:130px;
-    height:50px;
-    font:bold;
-    outline: none;
-    border:none;
-    margin: auto;
-    color: #6497b1;
-    background-color: #fff;
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
-
-
-}
-
-.homee{
-
-    color: #6497b1;
-}
-
-
-
-.hero-text {
-
-  font-family: 'Montserrat', sans-serif; 
-  text-align: center;
-  margin-left: 50%;
-  margin-top: 5%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 30px;
-  
-  
-    }
-
-    * { color:white; text-decoration: none;}
-
-
-    .white{
-      color: #fff;
-    }
-
-
-    .fa{
-
-    padding-top: 20px;
-    padding-bottom: 15px;
-    margin-bottom: 0 ;
-
-    }
-    .fa:hover{
-    text-decoration: none;
-    transform: scale(1.20);
-    }
-
-    .yo{
-      background-color: #fff;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-    .footer{
-      margin-top: 10%;
-    }
-
-
-
- .mail{
-
- 
-  cursor: default;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-
- 
-
-}
-
-.bi:hover{
-
-  transform: scale(2);
-}
-.pic{
-
- 
-  
-  width: 135px;
-  box-shadow: black 4px 4px 0 0,#000 4px 4px 0 1px;
-  border-radius: 30%;
-  border: 1px solid #000;
-  /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);*/
-  
-  margin-bottom: 10px;
-  
- 
-
-}
-
-
-
-.pic:hover{
-  
-  animation: shake 0.5s;
-
-  
-  
-
-}
-.row{
-
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-
-}
-
-.mail:hover{
-  
-  animation: shake 0.5s;
-
-}
-
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-
-.collapse {
-  &:not(.show) {
-    display: none;
-  }
-}
-
-.collapsing {
-  height: 0;
-  overflow: hidden;
-  @include transition($transition-collapse);
-
-  &.collapse-horizontal {
-    width: 0;
-    height: auto;
-    @include transition($transition-collapse-width);
-  }
-}
-
-.button2{
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow:  1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button2:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
-}
-
-@media (min-width: 768px) {
-  .button2{
-    padding: 0.25em 0.75em;
-  }
-}
-
-
-
-/* CSS */
-.button3{
-  appearance: button;
-  letter-spacing: 2px;
-  font-size: 16px;
-  background-color: #A5AF89;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: black 4px 4px 0 0,#000 4px 4px 0 1px;
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  color: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8bc6ec;
+  background: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background-color: #ecf4ff;
+  border-radius: 20px;
+  max-width: 800px;
+  min-width: 610px;
+  max-height: 800px;
+  box-shadow: 6px 6px 6px #000;
+  /*margin: 5rem auto;*/
+  padding: 4rem;
+}
+
+/* ====== HEADER ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.header button {
+  align-self: flex-start;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ecf4ff;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/196/196685.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
-  display: inline-block;
-  font-family: "Open Sans",sans-serif;
-  font-size: 14px;
+}
+
+.header .perfil {
+  display: flex;
+  gap: 2rem;
+}
+
+.perfil > img {
+  max-width: 10rem;
+  max-height: 10rem;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.perfil .description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.description > h1 {
+  font-weight: 600;
+}
+
+.description > h3 {
   font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
+}
+
+.description > p {
+  font-weight: 300;
+}
+
+.description .icons {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.icons > a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons > a:hover {
+  transform: scale(1.05);
+  transition: transform 300ms ease-in-out;
+  color: orange;
+}
+
+/* ====== CONTENT ====== */
+.content {
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 610px;
+}
+
+.container-projetos > h2 {
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.container-projetos .line {
+  font-weight: 300;
+  border-right: 3px solid #fff;
   white-space: nowrap;
-  width: 230px;
-  align-content: center;
-
+  overflow: hidden;
 }
 
-.button3:focus {
+/* === Criando a animação no texto === */
+
+.text-animation {
+  animation: cursor 500ms infinite normal, texto 4s steps(40) 1s normal both;
+}
+
+/* Animando o texto */
+@keyframes texto {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 27.8em;
+  }
+}
+
+/* Animando a borda direita do texto */
+@keyframes cursor {
+  from {
+    border-right-color: #fff;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.container-projetos .list {
+  margin-top: 0.9rem;
+  margin-left: 1rem;
+}
+
+.list > li {
+  margin-bottom: 0.2rem;
+}
+
+.list > li:hover {
+  transform: scale(1.01);
+  transition: transform 400ms ease-in-out;
+  color: orange;
+}
+
+.list > li > a {
   text-decoration: none;
+  color: #000;
+  font-weight: 400;
 }
 
-.button3:hover {
-  text-decoration: none;
+.list > li > a:hover {
+  color: orange;
 }
 
-.button3:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
+/* ====== TEMA DARK ====== */
+.dark {
+  background: linear-gradient(135deg, #525252, #414141, #313131);
+  /*background: linear-gradient(135deg, #707070 0%, #606060 25%, #505050 50%, #404040 75%, #303030 100%);*/
 }
 
-.button3:not([disabled]):active {
-  box-shadow: black 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
+.dark .container {
+  background: #202020;
 }
 
-@media (min-width: 768px) {
-  .button3 {
-    padding: 12px 50px;
-  }
+.dark .container .header {
+  color: #ecf4ff;
 }
 
-.hey{
-text-shadow: 2px 2px blue;
-  
-
-  animation-name: hey;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+.dark .container .header .perfil .description .icons a {
+  color: #ecf4ff;
 }
 
-
- 
-@keyframes hey {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+.dark .container .header .perfil .description .icons a:hover {
+  color: orange;
 }
 
-.wht{
-
-  text-shadow: 2px 2px red;
-
-  animation-name: wht;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+.dark .container .header button {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/169/169367.png");
+  background-color: #202020;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
 }
 
-
- 
-@keyframes wht {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
-}
-/*curtain*/
-
-.overlay {
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #A5AF89;
-  background-color:#A5AF89;
-  overflow-y: hidden;
-  transition: 0.5s;
+.dark .container .content {
+  background: #909090;
 }
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+    </style>
+
+    <script>
+
+function mudarTema() {
+  document.body.classList.toggle("dark");
 }
 
-.overlay p {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay p {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-
-.mark { 
-  background-color: #ECF87F;
-  padding: 0 0em;
-  height: 1.15em;
-  line-height: 1.15;
-  color: black;
-  padding-left: 1 0.1em;
-  box-shadow: blue 2px 2px 3px ;
-}
-
-.mark2 { 
-  background-color: black;
-  padding: 0 0em;
-  height: 1.15em;
-  line-height: 1.15;
-  color: white;
-  padding-left: 1 0.1em;
-}
-
-
-
-
-.float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:20px;
-  background-color:#A5AF89;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  box-shadow: black 2px 2px 3px ;
-  z-index:1000;
-  animation: bot-to-top 2s ease-out;
-  color: white;
-
-
-}
-
-ul{
-  position:fixed;
-  right:40px;
-  padding-bottom:20px;
-  bottom:80px;
-  z-index:100;
-}
-
-ul li{
-  list-style:none;
-  margin-bottom:10px;
-}
-
-ul li a{
-  background-color:#075e54;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  box-shadow: 2px 2px 3px black;
-  width:60px;
-  height:60px;
-  display:block;
-}
-
-ul:hover{
-  visibility:visible!important;
-  opacity:1!important;
-}
-
-
-.my-float{
-  font-size:24px;
-  margin-top:18px;
-  color: white;
-
-}
-
-
-a#menu-share + ul{
-  visibility: hidden;
-}
-
-a#menu-share:hover + ul{
-  visibility: visible;
-  animation: scale-in 0.5s;
-}
-
-a#menu-share i{
-  animation: rotate-in 0.5s;
-}
-
-a#menu-share:hover > i{
-  animation: rotate-out 0.5s;
-}
-@keyframes bot-to-top {
-    0%   {bottom:-40px}
-    50%  {bottom:40px}
-}
-
-@keyframes scale-in {
-    from {transform: scale(0);opacity: 0;}
-    to {transform: scale(1);opacity: 1;}
-}
-
-@keyframes rotate-in {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
-
-@keyframes rotate-out {
-    from {transform: rotate(360deg);}
-    to {transform: rotate(0deg);}
-}
-
-section {
-  padding: 10px 50px;
-  text-align: center;
-}
-
-.aboutme-desc{
-  font-family: 'Press Start 2P', cursive;
-   color: #FFB347;
-   text-align: left;
-  
-}
-
-@media screen and (min-width: 601px) {
-  .aboutme-desc{
-    font-size: 20px;
-    padding-top: 2%;
-  }
-}
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  .aboutme-desc{
-    font-size: 70%;
-  }
-}
-
-
- .buttoncaro{
-
-  outline: none;
-
-  }
-
-@media screen and (max-width: 320px) {
-  .caroh1{
-
-    font-size: 10px;
-
-  }
-}
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  .buttoncaro{
-   
-  }
-}
-
-
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
-}
-
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-
-/*button49*/
-
-#progress {
-    background: #333;
-    border-radius: 13px;
-    height: 20px;
-    width: 200px;
-    padding: 3px;
-    margin-bottom: 20px;
-
-}
-
-#progress:after {
-    content: '';
-    display: block;
-    background: orange;
-    width: 50%;
-    height: 100%;
-    border-radius: 9px;
-}
-
-   </style>
-
-   <script type="text/javascript">
-     var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { }";
-        document.body.appendChild(css);
-    };
-
-
-   </script>
-  </head>
-  <body> 
-  
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<!--     <div class="banner"> -->
-<!--   <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header"  > 
-<button  class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        
-        <span class="icon-bar" style="width: 70%;"></span>
-        <span class="icon-bar" style="width: 50%;"></span>
-        
-        
-      </button>
-
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-
-      <ul class="nav navbar-nav navbar-right">
-        
-      <li><button class="im-home" ><b class="homee">I'M HOME</b></button></li>&nbsp; 
-        <li><button class="home" onclick="window.location.href='about.html';"><b>ABOUT</b></button></li>&nbsp;
-        <li><button class="home" onclick="window.location.href='experiences.html';" ><b>EXPERIENCES</b></button></li>&nbsp;
-        <li><button class="home" onclick="window.location.href='skills.html';" ><b>SKILLS</b></button></li>
-      </ul>
-
-
-
-
-    </div>
-  </div>
-</nav>
- --><!-- HTML !-->
-
-
-
-<div class="container-fluid text-center" id="hello">
-  <img class="pic" src="yo.png"  ><br>
-
-
-  <b style="font-family: -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif; color:white;"><mark class="mark2"><a href="" style="text-decoration-line: none;" class="typewrite" data-period="2000"  data-type='[ "Hai, saya ", "Hello, I am ", "Bonjour, je suis ", "你好, 我是 ", "Привет, я ","Hola, yo soy ", "Hej, jag är", "हाय मैं हूँ", "こんにちは、イム ", "안녕 난 해요" ]'> 
-    <span class="wrap"></span> 
-  </a ></mark> <mark class="mark2">Aiman Hasni.</mark></b><br>
-
-<!--   <a href="https://instagram.com/aimnhsni?igshid=1tsip3ksq08vy"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="grey"  class="bi bi-instagram" viewBox="0 0 16 16" style="margin-right: 5px;">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a>
-|
-<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="grey" class="bi bi-github" viewBox="0 0 16 16" style="margin-right: 5px;">
-  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-</svg>
-|
-<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="grey" class="bi bi-linkedin" viewBox="0 0 16 16">
-  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-</svg>
-
- -->
-
-<h1 class="hey" style="font-family: 'Press Start 2P', cursive; font-size: 25px; margin-top: 20px; color:white;">
- Hey Friends, nice to meet you🖐
-
-</h1> <!-- <p style="font-family: 'Montserrat', sans-serif; color: #4E5B31;"><mark class="mark">I'm Aiman Hasni. Welcome to my page. Feel free to explore.</mark></p> 
-
-
-<p> --><br>
-  <button class="button3" onclick="document.getElementById('id01').style.display='block'" type="button" ><b style="color: #4E5B31;">ABOUT ME🙋‍♂️</b></button><br>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="height: 80%; background-color: transparent;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0); ">
-     
-      <header class="w3-container w3" style="background-color:transparent;"> 
-
-        <h2 class="wht"style="font-family: 'Press Start 2P', cursive; font-size: 20px;">What About Me?</h2>
-      </header>
-      <div class="w3-container justify-content-center" style="background-color:#38555F;box-shadow: #273B42 2px 2px 0 0, #000 2px 2px 0 1px; border-radius:20px;  padding: 5%;">
-        <h4 class="aboutme-desc" align="center">Studied at National University of Malaysia <img style="width: 20px;" src="https://lh6.googleusercontent.com/-pdR-9DWTAZw/TYJlJfLygCI/AAAAAAAAFAs/iYwvJ4Co9Eo/s1600/Universiti+Kebangsaan+Malaysia+%2528UKM%2529.png"> from 2019-2022 for Bachelor's Degree at Fakulti Teknologi dan Sains Maklumat as a Computer Science student majoring in Artificial Intelligence🤖.</h4>
-        <h4 class="aboutme-desc" align="center">Born in Kuala Lumpur🇲🇾, love to discover and learn new technologies. </h4>
-        <h4 class="aboutme-desc" align="center">Crypto and optimal health enthusiast💪.<br><br> #WAGMI<img style="width: 30px;" src="https://images.hive.blog/0x0/https://cdn.ko-fi.com/cdn/useruploads/display/gif_kofi_634f2458-c0ac-4481-ada4-db0c43637ff8btccoin.gif"></h4>
-
-
-               
-
+    </script>
+
+    <!-- CONTENT -->
+    <main class="content">
+      <div class="container-projetos">
+        <h2>Projetos</h2>
+        <p class="line text-animation">Projetos desenvolvidos durante a Imersão Dev da Alura.</p>
+        <ol class="list">
+          <li>
+            <a href="https://codepen.io/soaresv98/full/eYeoXyR" title="Calculadora de Média" target="_blank">
+              🔢 Calculadora de Média
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/soaresv98/full/PoEYYEW" title="Conversor de Temperatura" target="_blank">
+              💱 Conversor de Moedas
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/soaresv98/full/abEoxeG" title="Mentalista" target="_blank">
+              🔮 Mentalista
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/soaresv98/full/QWaboGp" title="AluraFlix" target="_blank">
+              📺 AluraFlix
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/soaresv98/full/NWXGovm" title="Brasfoot - Tabela de Classificação" target="_blank">
+              🥇 Brasfoot - Tabela de Classificação
+            </a>
+          </li>
+
+          <li>
+            <a href="https://codepen.io/soaresv98/full/BaJzdZj" title="Game of Cards" target="_blank">
+              ⚔ Game of Cards
+            </a>
+          </li>
+        </ol>
       </div>
-
- <footer><a class="wht"onclick="document.getElementById('id01').style.display='none'" 
-       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">PRESS TO CLOSE</a></footer>
-    </div>
-   
+    </main>
   </div>
-
-
-
-
-
-    <button class="button3" onclick="document.getElementById('id02').style.display='block'"  style=" color: #6497b1;" type="button" >
-    <b style="color: #4E5B31;">PROJECTS🛠</b>
-  </button><br>
-
-
-<div id="id02" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="height: 80%; background-color: transparent; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);">
-     
-      <header class="w3-container w3" style="background-color:transparent;"> 
-
-        <h2 class="wht"style="font-family: 'Press Start 2P', cursive; font-size: 20px;">My Projects</h2>
-
-      </header>
-      <div class="w3-container justify-content-center" style="background-color:#38555F;box-shadow: #273B42 2px 2px 0 0, #000 2px 2px 0 1px; border-radius:20px; ; padding:5%;">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="">
-            <div class="carousel-inner" style="">
-               
-              <div class="carousel-item active" style=" " data-period="2000ms">
-                
-              <!--   <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Sharity Apps Project1</h1>
-                <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                 <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">Sharity App Project</h1>
-                 <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;">An appliaction was built using Flutter technology to compete for CHIPTA 2021 Hackathon 
-                  joining SA Lab team members, National University of Malaysia, under IPT category
-                  organized by The Malaysian Administrative Modernisation and Management 
-                  Planning Unit (MAMPU).</h4>
-                <footer>
-                   <a class="wht" href="https://drive.google.com/file/d/1rPTrjrWxZpcjDIuOorwIgZGH594AFx6W/view?usp=sharing" target="blank"
-                   style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">TRY HERE</a>
-                   <br>
-               
-
-                 </footer> 
-
-              </div>
-
-              <div class="carousel-item" style="" data-period="2000ms">
-               
-
-              <!--   <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Robotic Pet Dog (Brando)</h1>
-                <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">Robotic Dog (Brando)</h1>
-                <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;"> Built mechanical ears movement for the robot to implement in the research regarding Human-Robot Interaction. Inspired by a famous
-                theory, <a href="https://en.wikipedia.org/wiki/Uncanny_valley" style="color: red;" target="blank">"The Uncanny Valley"</a> to study human acceptance on robotic pet, partenered with a pair of global students from Mexican University to accomplish our Brando the robotic dog prototype.</h4>
-                <footer>
-                   <!-- <a class="wht"onclick="document.getElementById('id02').style.display='none'" 
-                   style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">LIVE DEMO</a>
-                   <br>
-                   <a class="wht"onclick="document.getElementById('id02').style.display='none'" 
-                   style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">GITHUB REPO</a> -->
-
-                 </footer> 
-
-              </div>
-
-
-                    <div class="carousel-item" style=" " data-period="2000ms">
-               
-
-               <!--  <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Gigger.com (Gig Economy Portal)</h1>
-                <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">GRAPE LEAVES DISEASE (ESCA) DETECTION</h1>
-                <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;">Developed deep learning pipeline to create a computer vision model that can classify grape 
-                  leaves disease focused on Esca disease.  Used Tensorflow as backend, and Docker to improve quality of development environment.</h4>
-                <footer>
-                   <a class="wht"href="https://aimnhsni.github.io/esca-detection/" target="blank" 
-                   style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">LIVE DEMO</a>
-                   <br>
-                   <a class="wht"href='https://github.com/aimnhsni/Esca-Disease-Image-Classification' target="blank"" 
-                   style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">GITHUB REPO</a>
-
-                 </footer> 
-                 
-              </div>
-
-              <div class="carousel-item" style="" data-period="2000ms">
-               
-
-                <!--   <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Robotic Pet Dog (Brando)</h1>
-                  <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                  <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">Gig Economy Job Portal</h1>
-                  <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;"> Developed fully functional portal for job searching and posting in gig economy sector using 
-                    Django. In the portal, there are dashboard that display trends and analytic with interactive graph presentation that related to gig economy sector.
-                    </h4>
-                  <footer>
-                     <a class="wht" href="https://gigger-fyp.herokuapp.com/" target="blank"" 
-                     style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">LIVE DEMO</a>
-                     <br>
-                     <a class="wht"href='https://github.com/aimnhsni/Django-portal-gigger-fyp' target="blank"" 
-                     style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">GITHUB REPO</a>
-  
-                   </footer> 
-  
-                </div>
-
-                <div class="carousel-item" style="" data-period="2000ms">
-               
-
-                  <!--   <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Robotic Pet Dog (Brando)</h1>
-                    <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                    <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">Twitter Data Sentiment Analysis</h1>
-                    <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;"> Scrapped Twitter data using python libraries and processed it to be used in analysis.
-                      Implement machine learning algorithm to classify tweets sentiment regarding gig economy sector. Results of the analysis were visualized on the Gig Economy Job Portal.
-                      </h4>
-                    <footer>
-                       <!-- <a class="wht" href="https://gigger-fyp.herokuapp.com/" target="blank"" 
-                       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">LIVE DEMO</a>
-                       <br> -->
-                       <a class="wht"href='https://github.com/aimnhsni/sentimentAnalysis' target="blank"" 
-                       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">GITHUB REPO</a>
-    
-                     </footer> 
-    
-                  </div>
-
-                  <div class="carousel-item" style="" data-period="2000ms">
-               
-
-                    <!--   <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Robotic Pet Dog (Brando)</h1>
-                      <h4 class="caroh1" style="text-align:left;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">This is the repository for our team (Raidz)'s first place award-winning Event Management System (EMS) web application for Dell Technologies Malaysia's Digital Virtual Hack2Hire on the 3-4 February 2021</h4> -->
-                      <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">Construction PPE Detection using YOLOv3</h1>
-                      <h4 class="caroh1 justify-content-center"  style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px; line-height: 2;"> Annotated images of construction worker using python and anaconda environment. Trained
-                        model using Yolov3 in google colab. The trained model succeed to detect PPE in real time 
-                        video using webcam with good accuracy.
-                        
-                        </h4>
-                      <footer>
-                         <a class="wht" href="https://youtu.be/pmtgwBpYr6o" target="blank"" 
-                         style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">LIVE DEMO</a>
-                         <br>
-                         <a class="wht"href='https://github.com/aimnhsni/helmet-detection' target="blank"" 
-                         style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">GITHUB REPO</a>
-      
-                       </footer> 
-      
-                    </div>
-
-              
-            </div>
-
-            
-
-
-       
-            
-
-
-         
-          </div>
-
-       
-
-      </div>
-           <button class="buttoncaro"style="background-color: transparent;border: none;cursor: pointer;overflow: hidden;outline: none;"class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="">
-              <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/431f6ea1ef3da33.png" style="width: 50px;transform: rotate(90deg);">
-            </button>  
-             <button class="buttoncaro" style="background-color: transparent;border: none;cursor: pointer;overflow: hidden;outline: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="">
-              <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/431f6ea1ef3da33.png" style="width: 50px;transform: rotate(270deg);">
-            </button>
-
-
-
- <footer><a class="wht"onclick="document.getElementById('id02').style.display='none'" 
-       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">PRESS TO CLOSE</a></footer>
-
-    </div>
-       
-  </div>  
-
-
-
-    <!-- <button class="button3" onclick="document.getElementById('id03').style.display='block'" type="button" ><b style="color: #4E5B31;">EXPERIENCES</b></button><br> -->
-
-  <div id="id03" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="height: 80%; background-color: transparent;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0); ">
-     
-      <header class="w3-container w3" style="background-color:transparent;"> 
-
-        <h2 class="wht"style="font-family: 'Press Start 2P', cursive; font-size: 20px;">My Experiences</h2>
-      </header>
-      <div class="w3-container justify-content-center" style="background-color:#38555F;box-shadow: #273B42 2px 2px 0 0, #000 2px 2px 0 1px; border-radius:20px;  padding: 5%;">
-       <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;">WILL BE UPDATED SOON!</h1>
-
-
-               
-
-      </div>
-
- <footer><a class="wht"onclick="document.getElementById('id03').style.display='none'" 
-       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">PRESS TO CLOSE</a></footer>
-    </div>
-   
-  </div>
-
-
- <button class="button3" onclick="document.getElementById('id04').style.display='block'" type="button" ><b style="color: #4E5B31;">SKILLS💎</b></button><br>
-
-  <div id="id04" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="height: 80%; background-color: transparent;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0); ">
-     
-      <header class="w3-container w3" style="background-color:transparent;"> 
-
-        <h2 class="wht"style="font-family: 'Press Start 2P', cur sive; font-size: 20px;">My Skills / Technology Experiences</h2>
-      </header>
-      <div class="w3-container justify-content-center" style="background-color:#38555F;box-shadow: #273B42 2px 2px 0 0, #000 2px 2px 0 1px; border-radius:20px;  padding: 5%;">
-
-
-        <div class="" >
-        <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Languages</h1>
-        <h4 class="caroh1" style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">Python, Java, HTML, CSS, Javascript, Dart, PHP, C++</h4>
-        <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Frameworks/ Technologies</h1>
-        <h4 class="caroh1" style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">Django, Flask, Flutter, Bootstrap, Machine Learning, Computer Vision, Blockchain </h4>
-        <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Tools</h1>
-        <h4 class="caroh1" style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">ROS(Robot Operating System), Jupyter Notebook, Docker, Adobe (Photoshop, Illustrator, Premier Pro, XD), Android Studio, Firebase, Heroku</h4>
-        <h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; color: #FFB347;"> Operating System</h1>
-        <h4 class="caroh1" style="text-align:center;color:#AEC6CF; font-family: 'Press Start 2P', cursive;font-size: 15px;">Windows, Ubuntu/Linux, Raspberry Pi</h4>
-
-
-               
-
-      </div>
-
-   
-      
-    </div>
-
- <footer><a class="wht"onclick="document.getElementById('id04').style.display='none'" 
-       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">PRESS TO CLOSE</a></footer>
-    </div>
-   
-  </div>
-
-  <button class="button3" onclick="document.getElementById('id05').style.display='block'"  style=" color: #6497b1;" type="button" >
-    <b style="color: #4E5B31;">RESUME📑</b>
-  </button>
-
-  <div id="id05" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="height: 80%; background-color: transparent;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0); ">
-     
-      <header class="w3-container w3" style="background-color:transparent;"> 
-
-        <h2 class="wht"style="font-family: 'Press Start 2P', cursive; font-size: 20px;">RESUME</h2>
-      </header>
-      <div class="w3-container justify-content-center" style="background-color:#38555F;box-shadow: #273B42 2px 2px 0 0, #000 2px 2px 0 1px; border-radius:20px;  padding: 5%;">
-      
-        <iframe src="RESUME AIMAN HASNI.pdf" width="100%" height="500px">
-        </iframe>
-
-      </div>
-
- <footer><a class="wht"onclick="document.getElementById('id05').style.display='none'" 
-       style="background-color: transparent; text-decoration: none; font-size: 10px; font-family: 'Press Start 2P', cursive;">PRESS TO CLOSE</a></footer>
-    </div>
-   
-  </div>
-
-
-    
-
-
-
-<a href="#" class="float"style="text-decoration: none; padding-top: 12px;" id="menu-share">
-<i class="" >📞</i>
-</a>
-<ul >
-<li><a href="https://api.whatsapp.com/send?phone=601110154786&text=hi%20aiman" style="text-decoration: none; padding-top: 10px;" target="blank" class="child1">
-<i class="" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-</svg></i>
-</a></li>
-<li ><a href="mailto:aimanhasni114@gmail.com" style="text-decoration: none; padding-top: 10px; background-color: red;"  class="child2">
-<i class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-</svg></i>
-</a></li>
-</ul>
-
-  
-
-
-
-<script>
-var ctx = $("#myChart");
-var data = {
-  labels: ["LABEL1", "LABEL2", "LABEL3", "LABEL4", "LABEL5"],
-
-  datasets: [
-    {
-      label: "DATA1",
-      backgroundColor: "rgba(62,135,74,.5)",
-      pointBackgroundColor: "#34b44a",
-      data: [3, 3, 4, 2, 3]
-    },
-    {
-      label: "DATA2",
-      backgroundColor: "rgba(255,99,132,0.2)",
-      pointBackgroundColor: "rgba(255,99,132,1)",
-      data: [2, 2, 4, 4],
-      hidden: true
-    }
-  ]
-};
-
-var options = {
-  title: {
-    display: true,
-    fontColor: '#999',
-    fontStyle: 'regular',
-    fullWidth: false,
-    text: 'My Skills'
-  },
-  legend: {
-    fullWidth: false,
-    labels: {
-      fontColor: '#fff',
-      boxWidth: 0
-    }
-  },
-  elements: {
-    line: {
-    }
-  },
-  scale: {
-    angleLines: {
-      color: '#666'
-    },
-    gridLines: {
-      color: '#666'
-    },
-    pointLabels: {
-      fontColor: '#fff'
-    },
-    ticks: {
-      min: 0,
-      max: 5,
-      stepSize: 1,
-      display: false
-    }
-  },
-  tooltips: {
-    enabled: false
-  }
-};
-
-var myRadarChart = new Chart(ctx, {
-    type: 'radar',
-    data: data,
-    options: options
-});
-</script>
-
-<script type="text/javascript">
-  
-  function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-    var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-
-}
-</script>
-
-
-
- <footer class=" text-center">
-  <h1>----------</h1>
-
-  
-  <p style="font-family: 'Montserrat', sans-serif; ">visit me on:  
-
-  <b style="font-family: -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif; font-size: 17px;">
-    <a href="https://github.com/aimnhsni" style="color:white; text-decoration: none; ">github</a><a href="https://www.linkedin.com/in/aimhsni/" style="text-decoration: none; color:#0077b5;">linkedin</a><a href="https://www.youtube.com/channel/UC-3rKZykNh9qJyQJpOXZZ0w" style="color:#FF0000; text-decoration: none;">youtube</a></b> 
-
-    <p style="font-family: 'Montserrat', sans-serif; ">buy me 🍕:  
-
-  <b style="font-family: -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans,
-    Droid Sans, Helvetica Neue, sans-serif; font-size: 17px;">
-    <a class="link" onclick="copyToClipboard('#p1')" style="color:#FFD700; text-decoration: none; ">bitcoin</a></b> 
-
-    <div  id="snackbar" style="background-color:#90EE90;color:black; border-radius: 10px; z-index:1000; font-family: 'Press Start 2P', cursive; font-size: 7px;"><img style="width: 20px;" src="https://images.hive.blog/0x0/https://cdn.ko-fi.com/cdn/useruploads/display/gif_kofi_634f2458-c0ac-4481-ada4-db0c43637ff8btccoin.gif">Bitcoin address copied<img style="width: 20px;" src="https://images.hive.blog/0x0/https://cdn.ko-fi.com/cdn/useruploads/display/gif_kofi_634f2458-c0ac-4481-ada4-db0c43637ff8btccoin.gif"></div>
-    
-    
-
-<p style="font-family: 'Montserrat', sans-serif; font-size: 10px"> A portfolio that was made for fun. Created purely with HTML,CSS, JS & coffee. Copyright © aimnhsni 2022.</p><p id="p1" style="font-size: 0px">3QJyf7H9PT9Qx1UnJn2GqHQ1WAn4agfHHF</p>
-</footer>
-
-    
-
- </div>
-
-
-
-
-
-  </body>
-
+</body>
 
 </html>
-
