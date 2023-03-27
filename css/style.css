@@ -68,22 +68,25 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
-}
+  background: #fff  url(https://media.tenor.com/dt1etVruHGAAAAAi/rylsee-tooshytorap.gif) no-repeat center center;
+  background-size: 30%;
+  
+} 
 
 #preloader:before {
-  content: "";
+  content:  "";
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  
+  /* border: 6px solid #0563bb;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
   width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+  height: 60px; */
+  /* -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite; */
 }
 
 @-webkit-keyframes animate-preloader {
@@ -103,6 +106,10 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
+
+
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -1129,3 +1136,4 @@ section {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+
