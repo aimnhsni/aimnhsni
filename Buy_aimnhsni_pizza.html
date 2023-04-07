@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy me 🍕</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:white;
+}
+
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  width: 100%;
+ 
+
+  
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#snackbareth {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  margin-bottom: 50px;;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbareth.show1 {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#snackbarxrp {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  margin-bottom: 50px;;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+
+#snackbarxrp.show2 {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+</style>
+
+<body>
+
+    <div class="container">
+      <button onclick="copyToClipboard('#btc')" class="button-54" role="button"><b style="color: black;">$btc</b><span style="color: gold;" class="iconify" data-icon="cryptocurrency:btc"></span></button>
+        <br>
+        <br>
+        <button onclick="copyToClipboardeth('#eth')" class="button-54" role="button"><b style="color: black;">$eth</b><span  class="iconify" data-icon="logos:ethereum"></span></button>
+        <br>
+        <br>
+
+        <button onclick="copyToClipboardxrp('#xrp')" class="button-54" role="button"><b style="color: black;">$xrp</b><span style="color: #00aae4;" class="iconify" data-icon="cryptocurrency:xrp"></span></button>
+        <br>
+        <br>
+        <button onclick="parent.open('https://www.buymeacoffee.com/aimanhasniU')" class="button-54" role="button"> <img width="150px" src="https://influencermarketinghub.com/wp-content/uploads/2021/04/BuyMeACoffee.png" alt=""></button>
+
+        <!-- snackbar message -->
+        <div  id="snackbar" style=" color: black; background-color: gold; font-family: Arial, Helvetica, sans-serif; z-index:1000;"><img style="width: 20px;" src="https://images.hive.blog/0x0/https://cdn.ko-fi.com/cdn/useruploads/display/gif_kofi_634f2458-c0ac-4481-ada4-db0c43637ff8btccoin.gif"><b>$BTC address copied </b><img style="width: 20px;" src="https://images.hive.blog/0x0/https://cdn.ko-fi.com/cdn/useruploads/display/gif_kofi_634f2458-c0ac-4481-ada4-db0c43637ff8btccoin.gif"></div>
+        <div  id="snackbareth" style=" color: #ecf0f1; background-color:#3c3c3d ; font-family: Arial, Helvetica, sans-serif; z-index:1000;"><img style="width: 20px;" src="https://media0.giphy.com/media/cKQQpok2AyhYTgU0Tc/giphy.gif"><b>$ETH address copied </b><img style="width: 20px;" src="https://media0.giphy.com/media/cKQQpok2AyhYTgU0Tc/giphy.gif"></div>
+        <div  id="snackbarxrp" style=" color: #ecf0f1; background-color:#006097 ; font-family: Arial, Helvetica, sans-serif; z-index:1000;"><img style="width: 20px;" src="https://pbs.twimg.com/media/FP_CbPjXEAUWUlT.png"><b>$XRP address copied </b><img style="width: 20px;" src="https://pbs.twimg.com/media/FP_CbPjXEAUWUlT.png"></div>
+    </div>
+
+    
+
+  <script>
+
+  function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+        }
+
+        
+        function copyToClipboardeth(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        var x1 = document.getElementById("snackbareth");
+        x1.className = "show1";
+        setTimeout(function(){ x1.className = x1.className.replace("show1", ""); }, 3000);
+
+        }
+
+
+        function copyToClipboardxrp(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        var x2 = document.getElementById("snackbarxrp");
+        x2.className = "show2";
+        setTimeout(function(){ x2.className = x2.className.replace("show2", ""); }, 3000);
+
+        }    
+
+        
+
+
+  </script>
+
+<p id="btc" style="font-size: 0px">3QJyf7H9PT9Qx1UnJn2GqHQ1WAn4agfHHF</p>
+<p id="eth" style="font-size: 0px">0x702d9fbcf874793374f096247f74753c8e265b03</p>
+<p id="xrp" style="font-size: 0px">r3WKuwU7UcZShD9JECiZp96HPu7EfuwRLP</p>
+
+</body>
+
+</html>
+
+
+
+
+
+
