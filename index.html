@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  
   <title>aimnhsni</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -37,6 +37,7 @@
   ======================================================== -->
 </head>
 
+
 <body>
 
 
@@ -54,7 +55,9 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        <li><a href="Buy_aimnhsni_GoPro.html" class="nav-link scrollto"><i class="bx bx-coffee"></i> <span>Buy me 🍕</span></a></li>
+        <li><a href="Buy_aimnhsni_pizza.html" target="_blank" class="nav-link scrollto"><i class="bx bx-coffee"></i> <span>Buy me 🍕</span></a></li>
+        <li ><a  href=" target="_blank" class="nav-link scrollto"><i class="bx bx-cart"></i> <span>My Store</span></a></li>
+     
         
         
       </ul>
@@ -65,26 +68,41 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1> Aiman Hasni</h1> 
-
       
-
-      <p>I'm <span class="typed" data-typed-items=", Computer Science Graduate, Data Enthusiast, Developer, Freelancer"></span></p>
+   
+      
+      <h1> Aiman Hasni</h1> 
+      <main id="simple" style="margin-top: 20px; text-align: justify;">
+       <span class="line-1 anim-typewriter">~ Working as Software Engineer 👨‍💻</span><br>
+      <span >~ Do freelance for web & apps development or any digital services 📱💻</span><br>
+      <span>~ Keen to learn new technologies and improving skills ✍🏼📈</span><br>
+      <span>~ Any bussines/jobs or chit chat? ping me thru 
+        <a style=" text-decoration: underline;" href="mailto: aimanhasni114@gmail.com">email</a> or <a style=" text-decoration: underline;" href="tel:601110154786">phone</a> ☎️</span><br>
+      <span>~ Feel free to stalk my projects and profile on another platform below 👀</span>
+     
+    </main>
+    <main id="typewriter">
+      <p>I'm <span class="typed" data-typed-items=", Software Engineer, Data Enthusiast, Developer, Freelancer"></span></p></main>
       <div class="social-links">
         <a href="https://github.com/aimnhsni" target="_blank" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://www.youtube.com/channel/UC-3rKZykNh9qJyQJpOXZZ0w" target="_blank" class="facebook"><i class="bx bxl-youtube"></i></a>
         <a href="https://www.linkedin.com/in/aimhsni/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         
+       <br>
        
-
-        
-        
-        
-      
+        <main id="main2">
+  
+        </main>
         
       </div>
+     <label class="switch" style="margin-top: 20px;">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
 
     </div>
+    <div id="snackbar"><b>DETAIL MODE..</b></div>
+    <div id="snackbar2"><b><i>TLDR</i> MODE..</b></div>
     
   </section><!-- End Hero -->
 
@@ -379,7 +397,7 @@
           </div>
           
          <div class="section-title" style="margin-top: 30px;"><!-- HTML !-->
-          <a href="RESUME AIMAN HASNI.pdf" target="_blank" class="button-30" role="button">Download Resume&nbsp;<i class="bi bi-download"></i></a>
+          <a href="C:\Users\aiman\Downloads\importnt file\RESUME AIMAN HASNI.pdf" target="_blank" class="button-30" role="button">Download Resume&nbsp;<i class="bi bi-download"></i></a>
           
          </div> 
   
@@ -831,7 +849,7 @@
     <div class="container">
       <h3>Aiman Hasni</h3>
       <h4>Currently listening on <i class="bx bxl-apple"></i><b style="font-family:  Helvetica, Sans-Serif;">Music</b></h4>
-      <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/my/playlist/a-i/pl.u-BNA6YaeTebzL8m6"></iframe>
+      <iframe id="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/my/playlist/a-i/pl.u-BNA6YaeTebzL8m6"></iframe>
         <br/>
       <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
       <div class="social-links">
@@ -857,6 +875,69 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const contentDiv = document.getElementById('main');
+    const navbar = document.getElementById('navbar');
+    const contentDiv2 = document.getElementById('main2');
+    const typewriter = document.getElementById('typewriter');
+    const simple = document.getElementById('simple');
+    const x = document.getElementById("snackbar");
+    const y = document.getElementById("snackbar2");
+    
+
+    contentDiv.style.display = 'none'
+    navbar.style.display = 'none';
+    typewriter.style.display = 'none';
+    
+
+  
+    // toggleBtn.addEventListener('click', () => {
+    //   if (contentDiv.style.display === 'none') {
+    //     contentDiv.style.display = 'block';
+    //     contentDiv2.style.display = 'none';
+    //   } else {
+    //     contentDiv.style.display = 'none';
+    //     contentDiv2.style.display = 'block';
+       
+    //   }
+    // });
+    const checkbox = document.querySelector('.switch');
+
+    checkbox.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      
+      contentDiv.style.display = 'block';
+      navbar.style.display = 'block';
+      typewriter.style.display = 'block';
+      contentDiv2.style.display = 'block';
+      simple.style.display = 'none';
+      
+     
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    
+
+    }
+    else {
+      contentDiv.style.display = 'none';
+      navbar.style.display = 'none';
+      typewriter.style.display = 'none';
+      contentDiv2.style.display = 'block';
+      simple.style.display = 'block';
+      
+
+      y.className = "show";
+      setTimeout(function(){ y.className = y.className.replace("show", ""); }, 3000);
+    }
+    });
+
+   
+    </script>
+ 
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
